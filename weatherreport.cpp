@@ -25,13 +25,14 @@ class SensorStub : public IWeatherSensor {
     int m_windSpeedKMPH;
 
  public:
-    explicit SensorStub(int humidity = 72, int precipitation = 70, double temperature = 26, int windSpeed = 52)
-        : m_humidity(humidity), 
+    explicit SensorStub(int humidity = 72, int precipitation = 70,
+        double temperature = 26, int windSpeed = 52)
+        : m_humidity(humidity),
         m_precipitation(precipitation),
-        m_temperatureInC(temperature), 
-        m_windSpeedKMPH(windSpeed){
+        m_temperatureInC(temperature),
+        m_windSpeedKMPH(windSpeed) {
 	}
-
+    
     int Humidity() const override {
         return m_humidity;
     }
@@ -80,7 +81,7 @@ void TestRainy() {
 void TestHighPrecipitationAndLowWindspeed() {
     // This instance of stub needs to be different-
     // to give high precipitation (>60) and low wind-speed (<50)
-    SensorStub sensor(65,70,28.5,45);
+    SensorStub sensor(65, 70, 28.5, 45);
 
     // strengthen the assert to expose the bug
     // (function returns Sunny day, it should predict rain)

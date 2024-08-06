@@ -3,7 +3,7 @@
 #include<string>
 #include<sstream>
 
-using std::cout, std::stringstream,std::streambuf, std::string;
+using std::cout, std::stringstream, std::streambuf, std::string;
 
 const char* majorColor[] = { "White", "Red", "Black", "Yellow", "Violet" };
 const char* minorColor[] = { "Blue", "Orange", "Green", "Brown", "Slate" };
@@ -19,14 +19,14 @@ int PrintColorCodeMap() {
     return i * j;
 }
 
-void TestPrintColorCodeMap(){
+void TestPrintColorCodeMap() {
     stringstream colorMapOutput;
     streambuf* p_cout_streambuf = std::cout.rdbuf();
     cout.rdbuf(colorMapOutput.rdbuf());
 
     PrintColorCodeMap();
 
-	cout.rdbuf(p_cout_streambuf);
+    cout.rdbuf(p_cout_streambuf);
     
     stringstream expectedOutput;
     
