@@ -20,14 +20,16 @@ class IWeatherSensor {
 
 class SensorStub : public IWeatherSensor {
     int m_humidity;
-	int m_precipitation;
-	double m_temperatureInC;
-	int m_windSpeedKMPH;
+    int m_precipitation;
+    double m_temperatureInC;
+    int m_windSpeedKMPH;
 
-public:
-	SensorStub(int humidity=72, int precipitation=70, double temperature=26, int windSpeed=52)
-		: m_humidity(humidity), m_precipitation(precipitation), m_temperatureInC(temperature), m_windSpeedKMPH(windSpeed)
-    {
+ public:
+    explicit SensorStub(int humidity = 72, int precipitation = 70, double temperature = 26, int windSpeed = 52)
+        : m_humidity(humidity), 
+        m_precipitation(precipitation),
+        m_temperatureInC(temperature), 
+        m_windSpeedKMPH(windSpeed){
 	}
 
     int Humidity() const override {
