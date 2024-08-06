@@ -2,8 +2,7 @@
 #include <string>
 #include <iostream>
 
-//using std::cout, std::endl, std::string;
-using namespace std;
+using std::cout, std::endl, std::string;
 
 namespace WeatherSpace {
 class IWeatherSensor {

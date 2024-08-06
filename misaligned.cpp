@@ -21,15 +21,15 @@ int PrintColorCodeMap() {
 
 void TestPrintColorCodeMap()
 {
-    std::stringstream colorMapOutput;
-    std::streambuf* p_cout_streambuf = std::cout.rdbuf();
-    std::cout.rdbuf(colorMapOutput.rdbuf());
+    stringstream colorMapOutput;
+    streambuf* p_cout_streambuf = std::cout.rdbuf();
+    cout.rdbuf(colorMapOutput.rdbuf());
 
     PrintColorCodeMap();
 
-	std::cout.rdbuf(p_cout_streambuf);
+	cout.rdbuf(p_cout_streambuf);
 
-	std::stringstream expectedOutput;
+	stringstream expectedOutput;
 
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
@@ -45,7 +45,7 @@ int main() {
     int result = PrintColorCodeMap();
     assert(result == 25);
     TestPrintColorCodeMap();
-    std::cout << "All is well (maybe!)\n";
+    cout << "All is well (maybe!)\n";
 
     return 0;
 }
