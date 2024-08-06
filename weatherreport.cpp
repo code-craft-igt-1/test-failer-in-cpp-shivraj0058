@@ -31,7 +31,6 @@ class SensorStub : public IWeatherSensor {
         m_precipitation(precipitation),
         m_temperatureInC(temperature),
         m_windSpeedKMPH(windSpeed) {}
-    
     int Humidity() const override {
         return m_humidity;
     }
