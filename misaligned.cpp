@@ -33,7 +33,7 @@ void TestPrintColorCodeMap() {
     int pairNumber = 1;
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
-            expectedOutput << pairNumber << " | " << majorColor[i] << " | " << 
+            expectedOutput << pairNumber << " | " << majorColor[i] << " | " <<
                 minorColor[j] << "\n";
             pairNumber++;
         }
