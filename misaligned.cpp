@@ -28,9 +28,13 @@ void TestPrintColorCodeMap() {
 
     cout.rdbuf(p_cout_streambuf);
     stringstream expectedOutput;
+
+    //Color pair number starts from 1
+    int pairNumber = 1;
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
-            expectedOutput << i * 5 + j << " | " << majorColor[i] << " | " << minorColor[j] << "\n";
+            expectedOutput << pairNumber << " | " << majorColor[i] << " | " << minorColor[j] << "\n";
+            pairNumber++;
         }
     }
 
