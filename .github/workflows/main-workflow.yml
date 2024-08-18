@@ -15,7 +15,7 @@ jobs:
 
     - name: tshirts pass
       run: |
-        g++ -Wall -Wextra -Werror tshirts.cpp -o tshirts.out
+        g++ -Wall -Wextra -Werror tshirtsize.cpp testtshirtsize.cpp -o tshirts.out
         ./tshirts.out
 
     - name: misaligned pass
