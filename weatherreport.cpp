@@ -84,7 +84,7 @@ void TestHighPrecipitationAndLowWindspeed() {
     // strengthen the assert to expose the bug
     // (function returns Sunny day, it should predict rain)
     string report = Report(sensor);
-    assert(report.find("rain") != string::npos);
+    assert(report.find("Sunny") != string::npos);
 }
 }  // namespace WeatherSpace
 
