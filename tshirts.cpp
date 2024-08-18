@@ -20,7 +20,6 @@ int main() {
     assert(getTShirtSizeName(40) == 'M');
     assert(getTShirtSizeName(42) == 'L');
     assert(getTShirtSizeName(43) == 'L');
-    
     std::cout << "All is well (maybe!)\n";
     return 0;
 }
