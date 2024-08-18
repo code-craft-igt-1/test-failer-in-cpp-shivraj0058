@@ -1,6 +1,6 @@
 #include <assert.h>
 #include <iostream>
-#include "tshirtsize.h"
+#include "src/tshirtsize.h"
 
 int main() {
     assert(TShirtSize::getTShirtSizeName(37) == 'S');
