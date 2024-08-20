@@ -25,5 +25,5 @@ jobs:
 
     - name: alerter pass
       run: |
-        g++ -Wall -Wextra -Werror weatherreport.cpp -o weatherreport.out
+        g++ -Wall -Wextra -Werror weathersensor.cpp sensorstub.cpp testsensorstub.cpp -o weatherreport.out
         ./weatherreport.out
