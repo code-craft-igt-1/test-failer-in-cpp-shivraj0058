@@ -7,7 +7,7 @@ SensorStub::SensorStub(int humidity, int precipitation,
      m_temperatureInC(temperature),
      m_windSpeedKMPH(windSpeed) {}
 
-int SensorStub::Humidity() const{
+int SensorStub::Humidity() const {
     return m_humidity;
 }
 
